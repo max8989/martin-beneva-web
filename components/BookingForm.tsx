@@ -68,11 +68,11 @@ export function BookingForm() {
   // Success state
   if (formState === 'success') {
     return (
-      <div className="w-full max-w-md mx-auto">
-        <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-200 dark:border-green-800 rounded-3xl p-10 text-center shadow-lg">
-          <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+      <div className="w-full max-w-md mx-auto px-4">
+        <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-200 dark:border-green-800 rounded-3xl p-6 sm:p-8 md:p-10 text-center shadow-lg">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
             <svg
-              className="w-10 h-10 text-white"
+              className="w-8 h-8 sm:w-10 sm:h-10 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -85,15 +85,15 @@ export function BookingForm() {
               />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-[#2d2d2d] dark:text-white mb-3">
+          <h3 className="text-xl sm:text-2xl font-bold text-[#2d2d2d] dark:text-white mb-2 sm:mb-3">
             {t.successTitle}
           </h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg">
+          <p className="text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg">
             {t.successMessage}
           </p>
           <button
             onClick={handleReset}
-            className="px-8 py-3.5 bg-[#4B009B] text-white rounded-full font-semibold hover:bg-[#3a0079] transition-all shadow-md hover:shadow-lg"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 bg-[#4B009B] text-white rounded-full font-semibold hover:bg-[#3a0079] transition-all shadow-md hover:shadow-lg"
           >
             {t.successButton}
           </button>
@@ -105,11 +105,11 @@ export function BookingForm() {
   // Error state
   if (formState === 'error') {
     return (
-      <div className="w-full max-w-md mx-auto">
-        <div className="bg-red-50 dark:bg-red-900/20 border-2 border-red-200 dark:border-red-800 rounded-3xl p-10 text-center shadow-lg">
-          <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+      <div className="w-full max-w-md mx-auto px-4">
+        <div className="bg-red-50 dark:bg-red-900/20 border-2 border-red-200 dark:border-red-800 rounded-3xl p-6 sm:p-8 md:p-10 text-center shadow-lg">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
             <svg
-              className="w-10 h-10 text-white"
+              className="w-8 h-8 sm:w-10 sm:h-10 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -122,15 +122,15 @@ export function BookingForm() {
               />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-[#2d2d2d] dark:text-white mb-3">
+          <h3 className="text-xl sm:text-2xl font-bold text-[#2d2d2d] dark:text-white mb-2 sm:mb-3">
             {t.errorTitle}
           </h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg">
+          <p className="text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg">
             {t.errorMessage}
           </p>
           <button
             onClick={handleReset}
-            className="px-8 py-3.5 bg-[#4B009B] text-white rounded-full font-semibold hover:bg-[#3a0079] transition-all shadow-md hover:shadow-lg"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 bg-[#4B009B] text-white rounded-full font-semibold hover:bg-[#3a0079] transition-all shadow-md hover:shadow-lg"
           >
             {t.errorButton}
           </button>
@@ -141,20 +141,20 @@ export function BookingForm() {
 
   // Form state
   return (
-    <div className="w-full max-w-lg mx-auto">
+    <div className="w-full max-w-lg mx-auto px-4">
       {/* Gradient border wrapper */}
       <div className="relative">
         <div className="absolute -inset-1 bg-gradient-to-r from-[#4B009B] via-purple-500 to-pink-500 rounded-3xl blur-lg opacity-30"></div>
 
-        <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl">
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+        <div className="relative bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 sm:space-y-6">
             {/* Name Field */}
             <div className="group">
               <label
                 htmlFor="name"
-                className="block text-sm font-bold text-[#2d2d2d] dark:text-gray-200 mb-3 flex items-center gap-2"
+                className="block text-xs sm:text-sm font-bold text-[#2d2d2d] dark:text-gray-200 mb-2 sm:mb-3 flex items-center gap-2"
               >
-                <span className="text-[#4B009B]">👤</span>
+                <span className="text-[#4B009B] text-base sm:text-lg">👤</span>
                 {t.formName}
               </label>
               <div className="relative">
@@ -163,12 +163,12 @@ export function BookingForm() {
                   type="text"
                   id="name"
                   placeholder={t.formNamePlaceholder}
-                  className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-[#2d2d2d] dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-[#4B009B] focus:border-transparent focus:bg-white dark:focus:bg-gray-800 transition-all duration-300"
+                  className="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-[#2d2d2d] dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-[#4B009B] focus:border-transparent focus:bg-white dark:focus:bg-gray-800 transition-all duration-300 text-base"
                   disabled={formState === 'submitting'}
                 />
               </div>
               {errors.name && (
-                <p className="mt-2 text-sm text-red-600 dark:text-red-400 font-medium flex items-center gap-1">
+                <p className="mt-2 text-xs sm:text-sm text-red-600 dark:text-red-400 font-medium flex items-center gap-1">
                   <span>⚠</span> {errors.name.message}
                 </p>
               )}
@@ -178,9 +178,9 @@ export function BookingForm() {
             <div className="group">
               <label
                 htmlFor="email"
-                className="block text-sm font-bold text-[#2d2d2d] dark:text-gray-200 mb-3 flex items-center gap-2"
+                className="block text-xs sm:text-sm font-bold text-[#2d2d2d] dark:text-gray-200 mb-2 sm:mb-3 flex items-center gap-2"
               >
-                <span className="text-[#4B009B]">✉️</span>
+                <span className="text-[#4B009B] text-base sm:text-lg">✉️</span>
                 {t.formEmail}
               </label>
               <div className="relative">
@@ -189,12 +189,12 @@ export function BookingForm() {
                   type="email"
                   id="email"
                   placeholder={t.formEmailPlaceholder}
-                  className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-[#2d2d2d] dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-[#4B009B] focus:border-transparent focus:bg-white dark:focus:bg-gray-800 transition-all duration-300"
+                  className="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-[#2d2d2d] dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-[#4B009B] focus:border-transparent focus:bg-white dark:focus:bg-gray-800 transition-all duration-300 text-base"
                   disabled={formState === 'submitting'}
                 />
               </div>
               {errors.email && (
-                <p className="mt-2 text-sm text-red-600 dark:text-red-400 font-medium flex items-center gap-1">
+                <p className="mt-2 text-xs sm:text-sm text-red-600 dark:text-red-400 font-medium flex items-center gap-1">
                   <span>⚠</span> {errors.email.message}
                 </p>
               )}
@@ -204,9 +204,9 @@ export function BookingForm() {
             <div className="group">
               <label
                 htmlFor="phone"
-                className="block text-sm font-bold text-[#2d2d2d] dark:text-gray-200 mb-3 flex items-center gap-2"
+                className="block text-xs sm:text-sm font-bold text-[#2d2d2d] dark:text-gray-200 mb-2 sm:mb-3 flex items-center gap-2"
               >
-                <span className="text-[#4B009B]">📱</span>
+                <span className="text-[#4B009B] text-base sm:text-lg">📱</span>
                 {t.formPhone}
               </label>
               <div className="relative">
@@ -215,12 +215,12 @@ export function BookingForm() {
                   type="tel"
                   id="phone"
                   placeholder={t.formPhonePlaceholder}
-                  className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-[#2d2d2d] dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-[#4B009B] focus:border-transparent focus:bg-white dark:focus:bg-gray-800 transition-all duration-300"
+                  className="w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-[#2d2d2d] dark:text-white placeholder-gray-400 dark:placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-[#4B009B] focus:border-transparent focus:bg-white dark:focus:bg-gray-800 transition-all duration-300 text-base"
                   disabled={formState === 'submitting'}
                 />
               </div>
               {errors.phone && (
-                <p className="mt-2 text-sm text-red-600 dark:text-red-400 font-medium flex items-center gap-1">
+                <p className="mt-2 text-xs sm:text-sm text-red-600 dark:text-red-400 font-medium flex items-center gap-1">
                   <span>⚠</span> {errors.phone.message}
                 </p>
               )}
@@ -230,7 +230,7 @@ export function BookingForm() {
             <button
               type="submit"
               disabled={formState === 'submitting'}
-              className="group w-full mt-8 px-8 py-5 bg-gradient-to-r from-[#4B009B] to-[#6200c4] text-white rounded-2xl font-bold text-lg hover:shadow-2xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden"
+              className="group w-full mt-6 sm:mt-8 px-6 sm:px-8 py-4 sm:py-5 bg-gradient-to-r from-[#4B009B] to-[#6200c4] text-white rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg hover:shadow-2xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 {formState === 'submitting' ? (
@@ -255,7 +255,7 @@ export function BookingForm() {
             </button>
 
             {/* Trust badge */}
-            <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+            <p className="text-center text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-3 sm:mt-4">
               🔒 {language === 'en' ? 'Your information is secure and confidential' : 'Vos informations sont sécurisées et confidentielles'}
             </p>
           </form>
