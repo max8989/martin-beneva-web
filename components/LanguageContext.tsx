@@ -14,15 +14,16 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const [language, setLanguage] = useState<Language>('en');
 
-  useEffect(() => {
-    // Extract language from URL path (e.g., /en or /fr)
-    const pathLang = pathname.split('/')[1] as Language;
-    if (pathLang === 'en' || pathLang === 'fr') {
-      setLanguage(pathLang);
-    }
-  }, [pathname]);
+  // Compute language directly from pathname - no delays
+  const pathLang = pathname.split('/')[1] as string;
+  const language: Language = (pathLang === 'en' || pathLang === 'fr') ? pathLang : 'en';
+
+  const [, forceUpdate] = useState({});
+  const setLanguage = (lang: Language) => {
+    // This is handled by router.push() in the component, not by state
+    forceUpdate({});
+  };
 
   const value = {
     language,

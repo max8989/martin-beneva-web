@@ -38,7 +38,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative px-4 sm:px-6 py-16 sm:py-24 md:py-32 lg:py-40">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4B009B] via-[#6200c4] to-[#4B009B] tracking-tight mb-6 sm:mb-8 leading-tight animate-fade-in-up gradient-animated">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4B009B] via-[#6200c4] to-[#4B009B] tracking-tight mb-6 sm:mb-8 leading-tight animate-fade-in-up">
             {t.heroTitle}
           </h1>
 
