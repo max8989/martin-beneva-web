@@ -1,18 +1,20 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/components/LanguageContext';
 import { BookingForm } from '@/components/BookingForm';
-
 const ThemeToggle = dynamic(() => import('@/components/ThemeToggle').then(mod => ({ default: mod.ThemeToggle })), {
   ssr: false,
 });
 
 export default function Home() {
+  const router = useRouter();
   const { language, setLanguage, t } = useLanguage();
 
   const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'fr' : 'en');
+    const newLang = language === 'en' ? 'fr' : 'en';
+    router.push(`/${newLang}`);
   };
 
   return (
