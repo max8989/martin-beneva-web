@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Martin Beneva - Professional Booking Website
 
-## Getting Started
+A modern, bilingual (French/English) one-page website with an integrated booking form.
 
-First, run the development server:
+## Features
 
+- 🌍 **Bilingual** - Instant switching between French and English
+- 📱 **Mobile-First** - Fully responsive design
+- 🎨 **Modern UI** - Clean, minimal, professional aesthetic
+- ✅ **Form Validation** - Real-time validation with helpful error messages
+- 💾 **Supabase Integration** - Secure form submissions to database
+- 🌙 **Dark Mode** - Automatic dark mode support
+- ⚡ **Fast & Optimized** - Built with Next.js 16 and Tailwind CSS 4
+
+## Quick Start
+
+### 1. Install Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Set Up Supabase
+Follow the instructions in [`DATABASE_SETUP.md`](./DATABASE_SETUP.md)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Configure Environment
+```bash
+cp .env.local.example .env.local
+# Edit .env.local with your Supabase credentials
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Run Development Server
+```bash
+yarn dev
+```
 
-## Learn More
+Visit [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+## Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **[SETUP_GUIDE.md](./SETUP_GUIDE.md)** - Complete setup instructions
+- **[DATABASE_SETUP.md](./DATABASE_SETUP.md)** - Database configuration
+- **[CONTENT_GUIDE.md](./CONTENT_GUIDE.md)** - How to customize your content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS 4
+- React Hook Form
+- Zod validation
+- Supabase
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All content is in `lib/content.ts`. Update the text for both languages:
+
+```typescript
+export const content = {
+  en: {
+    heroTitle: 'Your Title Here',
+    // ... more content
+  },
+  fr: {
+    heroTitle: 'Votre Titre Ici',
+    // ... more content
+  }
+};
+```
+
+See [`CONTENT_GUIDE.md`](./CONTENT_GUIDE.md) for detailed customization instructions.
+
+## Deployment
+
+### Vercel (Recommended)
+1. Push to GitHub
+2. Import to Vercel
+3. Add environment variables
+4. Deploy
+
+Also works on Netlify, Railway, AWS Amplify, and Cloudflare Pages.
+
+## Project Structure
+
+```
+├── app/
+│   ├── layout.tsx          # Root layout
+│   ├── page.tsx            # Landing page
+│   └── globals.css         # Global styles
+├── components/
+│   ├── BookingForm.tsx     # Form component
+│   └── LanguageContext.tsx # Language state
+├── lib/
+│   ├── content.ts          # Bilingual content
+│   └── supabase.ts         # Database client
+└── [docs]                  # Setup guides
+```
+
+## License
+
+Built for Martin Beneva. All rights reserved.
