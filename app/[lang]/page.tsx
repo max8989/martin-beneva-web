@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/components/LanguageContext';
 import { BookingForm } from '@/components/BookingForm';
@@ -35,15 +36,8 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative px-6 py-24 md:py-32 lg:py-40 overflow-hidden">
-        {/* Animated background blobs */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 dark:bg-purple-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-float"></div>
-          <div className="absolute top-0 right-4 w-72 h-72 bg-pink-300 dark:bg-pink-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-purple-400 dark:bg-purple-800 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-70 animate-float" style={{ animationDelay: '4s' }}></div>
-        </div>
-
-        <div className="relative max-w-5xl mx-auto text-center">
+      <section className="relative px-6 py-24 md:py-32 lg:py-40">
+        <div className="max-w-5xl mx-auto text-center">
           <div className="inline-block mb-6 px-6 py-2 bg-gradient-to-r from-[#4B009B] to-[#6200c4] rounded-full text-white text-sm font-semibold shadow-lg animate-fade-in-up">
             ✨ {language === 'en' ? 'Professional Consulting' : 'Conseil Professionnel'}
           </div>
@@ -77,40 +71,28 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="px-6 py-20 md:py-32 relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left - Decorative element */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-[#4B009B] to-[#6200c4] rounded-3xl p-1 shadow-2xl transform hover:scale-105 transition-transform duration-500">
-                <div className="bg-white dark:bg-gray-900 rounded-3xl p-12 h-full">
-                  <div className="space-y-8">
-                    <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#4B009B] to-[#6200c4] rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                        ✓
-                      </div>
-                      <div>
-                        <div className="text-3xl font-bold text-[#4B009B] dark:text-purple-400">15+</div>
-                        <div className="text-sm text-gray-600 dark:text-gray-400">{language === 'en' ? 'Years Experience' : 'Ans d\'Expérience'}</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                        ★
-                      </div>
-                      <div>
-                        <div className="text-3xl font-bold text-[#4B009B] dark:text-purple-400">500+</div>
-                        <div className="text-sm text-gray-600 dark:text-gray-400">{language === 'en' ? 'Happy Clients' : 'Clients Satisfaits'}</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                        ◆
-                      </div>
-                      <div>
-                        <div className="text-3xl font-bold text-[#4B009B] dark:text-purple-400">98%</div>
-                        <div className="text-sm text-gray-600 dark:text-gray-400">{language === 'en' ? 'Success Rate' : 'Taux de Réussite'}</div>
-                      </div>
-                    </div>
-                  </div>
+          <div className="grid md:grid-cols-[400px_1fr] gap-12 items-start">
+            {/* Left - Professional Photo */}
+            <div className="relative mx-auto w-full max-w-sm">
+              <div className="relative group">
+                {/* Gradient border effect */}
+                <div className="absolute -inset-1 bg-gradient-to-br from-[#4B009B] via-purple-500 to-pink-500 rounded-3xl blur opacity-40 group-hover:opacity-60 transition duration-500"></div>
+
+                {/* Image container */}
+                <div className="relative bg-white dark:bg-gray-900 rounded-3xl p-2 shadow-2xl overflow-hidden">
+                  <Image
+                    src="/martin-gagne.jpg"
+                    alt="Martin Gagne - Professional Consultant"
+                    width={400}
+                    height={500}
+                    className="w-full h-auto rounded-2xl object-cover aspect-[4/5]"
+                    priority
+                  />
+                </div>
+
+                {/* Name badge */}
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#4B009B] to-[#6200c4] text-white px-8 py-3 rounded-full shadow-xl whitespace-nowrap">
+                  <p className="font-bold text-lg">{t.heroName}</p>
                 </div>
               </div>
             </div>
@@ -123,6 +105,22 @@ export default function Home() {
               <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                 <p className="text-xl">{t.aboutDescription}</p>
                 <p>{t.aboutDescription2}</p>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-4 mt-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-[#4B009B] dark:text-purple-400">15+</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">{language === 'en' ? 'Years' : 'Ans'}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-[#4B009B] dark:text-purple-400">500+</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">{language === 'en' ? 'Clients' : 'Clients'}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-[#4B009B] dark:text-purple-400">98%</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">{language === 'en' ? 'Success' : 'Succès'}</div>
+                </div>
               </div>
             </div>
           </div>
@@ -236,7 +234,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">Martin Beneva</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">{t.heroName}</h3>
               <p className="text-purple-200">
                 {language === 'en'
                   ? 'Professional consulting services tailored to your success.'
@@ -265,7 +263,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-purple-400/30 pt-8 text-center text-purple-200">
-            <p>© {new Date().getFullYear()} Martin Beneva. {t.footerRights}.</p>
+            <p>© {new Date().getFullYear()} {t.heroName}. {t.footerRights}.</p>
           </div>
         </div>
       </footer>

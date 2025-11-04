@@ -8,6 +8,7 @@ export const content = {
     // Hero Section
     heroTitle: 'Transform Your Business with Expert Guidance',
     heroSubtitle: 'Professional consulting services tailored to your needs',
+    heroName: 'Martin Gagne',
 
     // About Section
     aboutTitle: 'About Me',
@@ -75,6 +76,7 @@ export const content = {
     // Hero Section
     heroTitle: 'Transformez Votre Entreprise avec un Accompagnement Expert',
     heroSubtitle: 'Services de conseil professionnels adaptés à vos besoins',
+    heroName: 'Martin Gagne',
 
     // About Section
     aboutTitle: 'À Propos',

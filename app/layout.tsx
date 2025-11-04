@@ -10,7 +10,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Martin Beneva - Professional Consulting Services",
+  title: "Martin Gagne - Professional Consulting Services",
   description: "Transform your business with expert guidance. Professional consulting services tailored to your needs.",
 };
 
