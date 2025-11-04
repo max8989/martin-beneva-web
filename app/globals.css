@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-beneva-purple: #4B009B;
+  --color-beneva-purple-dark: #3a0079;
+  --color-beneva-purple-light: #6200c4;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #2d2d2d;
@@ -9,22 +19,9 @@
   --charcoal: #2d2d2d;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-beneva-purple: var(--beneva-purple);
-  --color-beneva-purple-dark: var(--beneva-purple-dark);
-  --color-beneva-purple-light: var(--beneva-purple-light);
-  --color-charcoal: var(--charcoal);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1a1a1a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {

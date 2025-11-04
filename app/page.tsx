@@ -1,7 +1,12 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { useLanguage } from '@/components/LanguageContext';
 import { BookingForm } from '@/components/BookingForm';
+
+const ThemeToggle = dynamic(() => import('@/components/ThemeToggle').then(mod => ({ default: mod.ThemeToggle })), {
+  ssr: false,
+});
 
 export default function Home() {
   const { language, setLanguage, t } = useLanguage();
@@ -12,8 +17,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-purple-50/30 to-white dark:from-gray-950 dark:via-purple-950/10 dark:to-gray-950">
-      {/* Language Toggle - Fixed Top Right */}
-      <div className="fixed top-6 right-6 z-50">
+      {/* Language & Theme Toggle - Fixed Top Right */}
+      <div className="fixed top-6 right-6 z-50 flex gap-3">
+        {/* Theme Toggle */}
+        <ThemeToggle />
+
+        {/* Language Toggle */}
         <button
           onClick={toggleLanguage}
           className="px-5 py-2.5 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-2 border-[#4B009B] rounded-full font-semibold text-sm text-[#4B009B] dark:text-white hover:bg-[#4B009B] hover:text-white hover:scale-105 dark:hover:bg-[#3a0079] transition-all duration-300 shadow-lg hover:shadow-xl"
