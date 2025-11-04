@@ -10,8 +10,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Martin Gagne - Professional Consulting Services",
-  description: "Transform your business with expert guidance. Professional consulting services tailored to your needs.",
+  title: "Martin Gagne - Financial Services Advisor | Conseiller en Services Financiers",
+  description: "Build your financial future with confidence. Personalized financial planning, investment management, and insurance solutions.",
 };
 
 export default function RootLayout({

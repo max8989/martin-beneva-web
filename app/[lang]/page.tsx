@@ -38,10 +38,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative px-6 py-24 md:py-32 lg:py-40">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-block mb-6 px-6 py-2 bg-gradient-to-r from-[#4B009B] to-[#6200c4] rounded-full text-white text-sm font-semibold shadow-lg animate-fade-in-up">
-            ✨ {language === 'en' ? 'Professional Consulting' : 'Conseil Professionnel'}
-          </div>
-
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4B009B] via-[#6200c4] to-[#4B009B] tracking-tight mb-8 leading-tight animate-fade-in-up gradient-animated">
             {t.heroTitle}
           </h1>
@@ -107,19 +103,40 @@ export default function Home() {
                 <p>{t.aboutDescription2}</p>
               </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 mt-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#4B009B] dark:text-purple-400">15+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">{language === 'en' ? 'Years' : 'Ans'}</div>
+              {/* Core Values */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
+                <div className="flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+                  <div className="text-2xl">🤝</div>
+                  <div>
+                    <h3 className="font-semibold text-[#4B009B] dark:text-purple-300 mb-1">
+                      {language === 'en' ? 'Trust & Integrity' : 'Confiance & Intégrité'}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {language === 'en' ? 'Building relationships based on honesty and transparency' : 'Relations basées sur l\'honnêteté et la transparence'}
+                    </p>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#4B009B] dark:text-purple-400">500+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">{language === 'en' ? 'Clients' : 'Clients'}</div>
+                <div className="flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+                  <div className="text-2xl">🎯</div>
+                  <div>
+                    <h3 className="font-semibold text-[#4B009B] dark:text-purple-300 mb-1">
+                      {language === 'en' ? 'Personalized Solutions' : 'Solutions Personnalisées'}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {language === 'en' ? 'Tailored strategies that fit your unique goals' : 'Stratégies adaptées à vos objectifs uniques'}
+                    </p>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#4B009B] dark:text-purple-400">98%</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">{language === 'en' ? 'Success' : 'Succès'}</div>
+                <div className="flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+                  <div className="text-2xl">💼</div>
+                  <div>
+                    <h3 className="font-semibold text-[#4B009B] dark:text-purple-300 mb-1">
+                      {language === 'en' ? 'Long-term Partnership' : 'Partenariat à Long Terme'}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {language === 'en' ? 'Committed to your financial success for years to come' : 'Engagé pour votre succès financier à long terme'}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -235,10 +252,13 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
               <h3 className="text-2xl font-bold text-white mb-4">{t.heroName}</h3>
+              <p className="text-sm text-purple-300 mb-2">
+                {language === 'en' ? 'Financial Services Advisor' : 'Conseiller en Services Financiers'}
+              </p>
               <p className="text-purple-200">
                 {language === 'en'
-                  ? 'Professional consulting services tailored to your success.'
-                  : 'Services de conseil professionnels adaptés à votre succès.'}
+                  ? 'Helping you build a secure financial future with personalized advice and strategic planning.'
+                  : 'Vous aider à bâtir un avenir financier sécurisé avec des conseils personnalisés et une planification stratégique.'}
               </p>
             </div>
             <div>

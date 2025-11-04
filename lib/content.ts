@@ -6,35 +6,35 @@ export const content = {
     languageToggle: 'FR',
 
     // Hero Section
-    heroTitle: 'Transform Your Business with Expert Guidance',
-    heroSubtitle: 'Professional consulting services tailored to your needs',
+    heroTitle: 'Build Your Financial Future with Confidence',
+    heroSubtitle: 'Personalized financial advice for your peace of mind',
     heroName: 'Martin Gagne',
 
     // About Section
-    aboutTitle: 'About Me',
-    aboutDescription: `I'm a dedicated business consultant with years of experience helping companies achieve their goals. My approach combines strategic thinking with practical solutions to deliver measurable results.`,
-    aboutDescription2: `Whether you're looking to optimize operations, scale your business, or navigate complex challenges, I'm here to help you succeed.`,
+    aboutTitle: 'Your Financial Partner',
+    aboutDescription: `As a dedicated Financial Services Advisor, I help individuals and families achieve their financial goals through personalized planning and strategic advice. My mission is to provide you with clarity and confidence in your financial decisions.`,
+    aboutDescription2: `Whether you're planning for retirement, protecting your loved ones, or growing your investments, I'm here to guide you every step of the way with integrity and expertise.`,
 
     // Services
-    servicesTitle: 'What I Offer',
+    servicesTitle: 'My Services',
     services: [
       {
-        title: 'Strategic Planning',
-        description: 'Develop clear roadmaps to achieve your business objectives'
+        title: 'Retirement Planning',
+        description: 'Build a solid strategy for a comfortable and secure retirement'
       },
       {
-        title: 'Process Optimization',
-        description: 'Streamline operations for maximum efficiency'
+        title: 'Investment Management',
+        description: 'Grow your wealth with personalized investment solutions'
       },
       {
-        title: 'Growth Strategy',
-        description: 'Scale your business with confidence and clarity'
+        title: 'Insurance & Protection',
+        description: 'Protect what matters most with the right coverage'
       }
     ],
 
     // CTA Section
-    ctaTitle: 'Ready to Get Started?',
-    ctaSubtitle: 'Book a free consultation to discuss how I can help your business grow',
+    ctaTitle: 'Ready to Take Control of Your Financial Future?',
+    ctaSubtitle: 'Book a complimentary consultation to discuss your financial goals',
 
     // Form
     formTitle: 'Book Your Appointment',
@@ -74,35 +74,35 @@ export const content = {
     languageToggle: 'EN',
 
     // Hero Section
-    heroTitle: 'Transformez Votre Entreprise avec un Accompagnement Expert',
-    heroSubtitle: 'Services de conseil professionnels adaptés à vos besoins',
+    heroTitle: 'Bâtissez Votre Avenir Financier en Toute Confiance',
+    heroSubtitle: 'Conseils financiers personnalisés pour votre tranquillité d\'esprit',
     heroName: 'Martin Gagne',
 
     // About Section
-    aboutTitle: 'À Propos',
-    aboutDescription: `Je suis un consultant en affaires dévoué avec des années d'expérience dans l'aide aux entreprises pour atteindre leurs objectifs. Mon approche combine la réflexion stratégique avec des solutions pratiques pour obtenir des résultats mesurables.`,
-    aboutDescription2: `Que vous cherchiez à optimiser vos opérations, développer votre entreprise ou relever des défis complexes, je suis là pour vous aider à réussir.`,
+    aboutTitle: 'Votre Partenaire Financier',
+    aboutDescription: `En tant que Conseiller en Services Financiers dévoué, j'aide les particuliers et les familles à atteindre leurs objectifs financiers grâce à une planification personnalisée et des conseils stratégiques. Ma mission est de vous offrir clarté et confiance dans vos décisions financières.`,
+    aboutDescription2: `Que vous planifiiez votre retraite, protégiez vos proches ou fassiez fructifier vos investissements, je suis là pour vous guider à chaque étape avec intégrité et expertise.`,
 
     // Services
     servicesTitle: 'Mes Services',
     services: [
       {
-        title: 'Planification Stratégique',
-        description: 'Développer des feuilles de route claires pour atteindre vos objectifs'
+        title: 'Planification de Retraite',
+        description: 'Établir une stratégie solide pour une retraite confortable et sécurisée'
       },
       {
-        title: 'Optimisation des Processus',
-        description: 'Rationaliser les opérations pour une efficacité maximale'
+        title: 'Gestion de Placements',
+        description: 'Faire fructifier votre patrimoine avec des solutions personnalisées'
       },
       {
-        title: 'Stratégie de Croissance',
-        description: 'Développer votre entreprise avec confiance et clarté'
+        title: 'Assurance et Protection',
+        description: 'Protéger ce qui compte le plus avec la bonne couverture'
       }
     ],
 
     // CTA Section
-    ctaTitle: 'Prêt à Commencer?',
-    ctaSubtitle: 'Réservez une consultation gratuite pour discuter de la façon dont je peux aider votre entreprise à croître',
+    ctaTitle: 'Prêt à Prendre le Contrôle de Votre Avenir Financier?',
+    ctaSubtitle: 'Réservez une consultation gratuite pour discuter de vos objectifs financiers',
 
     // Form
     formTitle: 'Réservez Votre Rendez-vous',
