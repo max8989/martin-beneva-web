@@ -69,7 +69,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] gap-8 md:gap-12 items-start">
             {/* Left - Professional Photo */}
-            <div className="relative mx-auto w-full max-w-[280px] sm:max-w-sm mb-8 md:mb-0">
+            <div className="relative mx-auto w-full max-w-[280px] sm:max-w-sm mb-8 md:mb-0 animate-fade-in-up">
               <div className="relative group">
                 {/* Gradient border effect */}
                 <div className="absolute -inset-1 bg-gradient-to-br from-[#4B009B] via-purple-500 to-pink-500 rounded-3xl blur opacity-40 group-hover:opacity-60 transition duration-500"></div>
@@ -95,17 +95,17 @@ export default function Home() {
 
             {/* Right - Content */}
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2d2d2d] dark:text-white mb-4 sm:mb-6 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#2d2d2d] dark:text-white mb-4 sm:mb-6 leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 {t.aboutTitle}
               </h2>
               <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                <p className="text-lg sm:text-xl">{t.aboutDescription}</p>
-                <p>{t.aboutDescription2}</p>
+                <p className="text-lg sm:text-xl animate-fade-in-up" style={{ animationDelay: '0.3s' }}>{t.aboutDescription}</p>
+                <p className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>{t.aboutDescription2}</p>
               </div>
 
               {/* Core Values */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
-                <div className="flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+                <div className="flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
                   <div className="text-2xl">🤝</div>
                   <div>
                     <h3 className="font-semibold text-[#4B009B] dark:text-purple-300 mb-1">
@@ -116,7 +116,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+                <div className="flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
                   <div className="text-2xl">🎯</div>
                   <div>
                     <h3 className="font-semibold text-[#4B009B] dark:text-purple-300 mb-1">
@@ -127,7 +127,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+                <div className="flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
                   <div className="text-2xl">💼</div>
                   <div>
                     <h3 className="font-semibold text-[#4B009B] dark:text-purple-300 mb-1">
